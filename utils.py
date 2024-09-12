@@ -95,7 +95,7 @@ def draw_age_gender_emotion(face_boxes, image):
         fontScale = image.shape[1]/750
 
         text = gender + ' ' + str(age) + ' ' + EMOTION_NAMES[index]
-        cv2.putText(show_image, text, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX, 5, (0, 200, 0), 8)
+        cv2.putText(show_image, text, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX, fontScale, (0, 200, 0), 8)
         cv2.rectangle(img=show_image, pt1=(xmin,ymin), pt2=(xmax,ymax), color=box_color, thickness=5)
         
     return show_image
