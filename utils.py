@@ -92,7 +92,7 @@ def draw_age_gender_emotion(face_boxes, image):
 
         # --- age and gender ---
 
-        fontScale = image.shape[1]/1000
+        fontScale = image.shape[1]/750
 
         text = gender + ' ' + str(age) + ' ' + EMOTION_NAMES[index]
         cv2.putText(show_image, text, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX, 5, (0, 200, 0), 8)
@@ -100,7 +100,7 @@ def draw_age_gender_emotion(face_boxes, image):
         
     return show_image
 
-def predict_image(image, conf_threshold):
+def predict_image(image, conf_threshold = .5):
     input_image = preprocess(image, input_layer_face)
     results = compiled_model_face([input_image])[output_layer_face]
     face_boxes, scores = find_faceboxes(image, results, conf_threshold)
