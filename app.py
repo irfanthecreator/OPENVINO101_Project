@@ -22,6 +22,8 @@ def play_video(video_source):
             break
 
 def play_live_camera():
+    input = None 
+    conf_threshold = float(20)/100 # confidence in float => 20% = 0.2
     image = camera_input_live()
     uploaded_image = PIL.Image.open(image)
     uploaded_image_cv = cv2.cvtColor(numpy.array(uploaded_image), cv2.COLOR_RGB2BGR)
