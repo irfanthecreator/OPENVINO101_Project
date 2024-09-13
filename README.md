@@ -1,5 +1,6 @@
 # OPENVINO101_Project
-Age, Gender and Emotion Detection
+## Age/Gender/Emotion Detection Project
+OMZ Models used: models/face-detection-adas-0001.xml, emotions-recognition-retail-0003.xml, age-gender-recognition-retail-0013.xml
 
 Link to Web App: [URL](https://irfanrizkiazmiopenvino101project.streamlit.app/)
 
